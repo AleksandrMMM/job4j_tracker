@@ -10,6 +10,10 @@ public class Student {
         System.out.println("I believe I can fly");
     }
 
+    public void sing(String song) {
+        System.out.println(song);
+    }
+
     public static void main(String[] args) {
         Student petya = new Student();
         for (int i = 0; i < 4; i++) {
