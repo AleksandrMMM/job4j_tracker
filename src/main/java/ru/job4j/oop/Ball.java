@@ -4,8 +4,10 @@ public class Ball {
 
     public void tryRun(boolean condition) {
 
-       String str =  condition ? "колобок съеден" : "колобок сбежал";
-        System.out.println(str);;
-
+        if (condition) {
+            System.out.println("колобок съеден");
+        } else {
+            System.out.println("колобок сбежал");
+        }
     }
 }
