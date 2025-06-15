@@ -12,7 +12,7 @@ public class Library {
         Book[] books = {book, bookTwo, bookThree, bookFour};
 
         for (int i = 0; i < books.length; i++) {
-            System.out.println(books[i] + " " + i);
+            System.out.println(books[i].getName() + " " + i);
         }
 
         Book temp = books[0];
