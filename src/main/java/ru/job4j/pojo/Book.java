@@ -28,9 +28,12 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "name='" + name + '\'' +
-                ", pages=" + pages +
+        return "Book{"
+                +
+                "name='"
+                + name + '\'' +
+                ", pages="
+                + pages +
                 '}';
     }
 }
