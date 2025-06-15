@@ -18,14 +18,14 @@
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.9.0</version>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.13.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>5.9.0</version>
+            <version>5.13.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -45,7 +45,7 @@
                     <dependency>
                         <groupId>com.puppycrawl.tools</groupId>
                         <artifactId>checkstyle</artifactId>
-                        <version>10.3.3</version>
+                        <version>10.24.0</version>
                     </dependency>
                 </dependencies>
                 <executions>
