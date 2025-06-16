@@ -58,9 +58,7 @@ public class Tracker {
     }
 
     public Item[] findAll() {
-        Item[] result = new Item[size];
-        System.arraycopy(items, 0, result, 0, size);
-        return result;
+        return Arrays.copyOf(items, size);
     }
 
     private int indexOf(int id) {
