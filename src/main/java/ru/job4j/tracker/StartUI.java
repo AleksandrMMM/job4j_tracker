@@ -23,7 +23,8 @@ public class StartUI {
             int select = Integer.parseInt(scanner.nextLine());
             if (select != 6) {
                 System.out.println("Пользователь выбрал: " + select);
-            } if (select == 0) {
+            }
+            if (select == 0) {
                 System.out.println("=== Создание новой заявки ===");
                 System.out.print("Введите имя: ");
                 String name = scanner.nextLine();
