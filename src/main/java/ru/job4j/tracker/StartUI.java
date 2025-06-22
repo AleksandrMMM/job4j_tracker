@@ -21,9 +21,6 @@ public class StartUI {
             showMenu();
             System.out.print("Выбрать: ");
             int select = Integer.parseInt(scanner.nextLine());
-            if (select != 6) {
-                System.out.println("Пользователь выбрал: " + select);
-            }
             if (select == 0) {
                 System.out.println("=== Создание новой заявки ===");
                 System.out.print("Введите имя: ");
