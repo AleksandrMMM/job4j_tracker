@@ -78,5 +78,6 @@ public class StartUI {
     public static void main(String[] args) {
 
         new StartUI().init(new Scanner(System.in), new Tracker());
+
     }
 }
