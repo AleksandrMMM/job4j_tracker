@@ -41,9 +41,9 @@ public class StartUI {
                 }
             } else if (select == 2) {
                 System.out.println("=== Редактирование заявки ===");
-                System.out.println("Введите id: ");
+                System.out.print("Введите id: ");
                 var id = Integer.parseInt(scanner.nextLine());
-                System.out.println("Введите имя: ");
+                System.out.print("Введите имя: ");
                 Item item = new Item(scanner.nextLine());
                 if (tracker.replace(id, item)) {
                     System.out.println("Заявка изменена успешно.");
