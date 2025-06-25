@@ -68,7 +68,6 @@ public class StartUI {
                 } else {
                     System.out.println("Заявка с введенным id: " + id + " не найдена.");
                 }
-                System.out.println(item);
 
             } else if (select == 6) {
                 run = false;
