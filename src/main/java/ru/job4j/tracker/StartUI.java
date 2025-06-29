@@ -1,6 +1,5 @@
 package ru.job4j.tracker;
 import java.util.Objects;
-import java.util.Scanner;
 
 public class StartUI {
 
@@ -50,7 +49,6 @@ public class StartUI {
 
             } else if (select == 3) {
                 System.out.println("=== Удаление заявки ===");
-
                 int id = input.askInt("Введите id: ");
                 Item item = tracker.findById(id);
                 tracker.delete(id);
@@ -67,8 +65,7 @@ public class StartUI {
 
             } else if (select == 5) {
                 System.out.println("=== Вывод заявок по имени ===");
-                System.out.print("Введите имя: ");
-                String name = scanner.nextLine();
+                String name = input.askStr("Введите имя: ");
                 Item[] items = tracker.findByName(name);
                 if (items.length > 0) {
                     for (Item item : items) {
