@@ -3,8 +3,15 @@ package ru.job4j.tracker.action;
 import ru.job4j.tracker.Input;
 import ru.job4j.tracker.Item;
 import ru.job4j.tracker.Tracker;
+import ru.job4j.tracker.output.Output;
 
 public class ReplaceAction implements UserAction {
+
+    private final Output output;
+
+    public ReplaceAction(Output output) {
+        this.output = output;
+    }
 
     @Override
     public String name() {
@@ -17,9 +24,9 @@ public class ReplaceAction implements UserAction {
         var id = input.askInt("Введите id: ");
         Item item = new Item(input.askStr("Введите имя: "));
         if (tracker.replace(id, item)) {
-            System.out.println("Заявка изменена успешно.");
+            output.println("Заявка изменена успешно.");
         } else {
-            System.out.println("Ошибка замены заявки.");
+            output.println("Ошибка замены заявки.");
         }
 
         return true;

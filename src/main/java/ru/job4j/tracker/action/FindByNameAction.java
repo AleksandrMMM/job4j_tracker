@@ -3,8 +3,15 @@ package ru.job4j.tracker.action;
 import ru.job4j.tracker.Input;
 import ru.job4j.tracker.Item;
 import ru.job4j.tracker.Tracker;
+import ru.job4j.tracker.output.Output;
 
 public class FindByNameAction implements UserAction {
+
+    private final Output output;
+
+    public FindByNameAction(Output output) {
+        this.output = output;
+    }
 
     @Override
     public String name() {
@@ -21,7 +28,7 @@ public class FindByNameAction implements UserAction {
                 System.out.println(item);
             }
         } else {
-            System.out.println("Заявки с именем: " + name + " не найдены.");
+            output.println("Заявки с именем: " + name + " не найдены.");
         }
 
         return true;

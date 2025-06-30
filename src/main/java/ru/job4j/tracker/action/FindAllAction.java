@@ -3,8 +3,15 @@ package ru.job4j.tracker.action;
 import ru.job4j.tracker.Input;
 import ru.job4j.tracker.Item;
 import ru.job4j.tracker.Tracker;
+import ru.job4j.tracker.output.Output;
 
 public class FindAllAction implements UserAction {
+
+    private final Output output;
+
+    public FindAllAction(Output output) {
+        this.output = output;
+    }
 
     @Override
     public String name() {
@@ -20,7 +27,7 @@ public class FindAllAction implements UserAction {
                 System.out.println(item);
             }
         } else {
-            System.out.println("Хранилище еще не содержит заявок");
+            output.println("Хранилище еще не содержит заявок");
         }
 
         return true;
