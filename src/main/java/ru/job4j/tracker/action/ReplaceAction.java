@@ -15,12 +15,12 @@ public class ReplaceAction implements UserAction {
 
     @Override
     public String name() {
-        return "Редактирование заявки";
+        return "Изменить заявку";
     }
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-
+        output.println("=== Редактирование заявки ===");
         var id = input.askInt("Введите id: ");
         Item item = new Item(input.askStr("Введите имя: "));
         if (tracker.replace(id, item)) {
