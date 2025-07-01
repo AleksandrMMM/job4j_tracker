@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import ru.job4j.tracker.action.ExitAction;
 import ru.job4j.tracker.action.FindByNameAction;
 import ru.job4j.tracker.action.UserAction;
+import ru.job4j.tracker.input.Input;
+import ru.job4j.tracker.output.MockInput;
 import ru.job4j.tracker.output.Output;
 import ru.job4j.tracker.output.StubOutput;
 
