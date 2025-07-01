@@ -17,7 +17,7 @@ public class FindByIdActionTest {
         Output output = new StubOutput();
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Test item"));
-        Input input = new MockInput( new String[] {"0", String.valueOf(item.getId()), "1"});
+        Input input = new MockInput(new String[] {"0", String.valueOf(item.getId()), "1"});
         UserAction[] actions = new UserAction[] {
                 new FindByIdAction(output),
                 new ExitAction(output)
