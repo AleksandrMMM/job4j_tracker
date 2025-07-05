@@ -1,0 +1,20 @@
+package ru.job4j.ex;
+
+public class FindMaxLength {
+
+    public static void main(String[] args) {
+        String[] shops = {"Ebay", null, "Amazon", null, "Ozon"};
+        int max = 0;
+        for (String shop : shops) {
+            if (shop == null) {
+                continue;
+            }
+
+            String element = shop;
+            if (element.length() > max) {
+                max = element.length();
+            }
+        }
+        System.out.println("Max length : " + max);
+    }
+}
