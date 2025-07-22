@@ -25,7 +25,7 @@ public final class Airbus extends Aircraft {
 
     public void printCountEngine() {
 
-        System.out.println(name.equals("A320") ? COUNT_ENGINE : "4");
+        System.out.println(name.equals("A380") ? "4" : COUNT_ENGINE);
     }
 
     @Override
