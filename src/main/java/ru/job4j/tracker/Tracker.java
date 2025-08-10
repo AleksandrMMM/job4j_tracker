@@ -58,11 +58,14 @@ public class Tracker {
 
     private int indexOf(int id) {
 
-        return items.stream()
-                .filter(item -> item.getId() == id)
-                .map(Item::getId)
-                .findFirst()
-                .orElse(-1);
+        int result = -1;
+        for (int index = 0; index < items.size(); index++) {
+            if (items.get(index).getId() == id) {
+                result = index;
+                break;
+            }
+        }
+        return result;
     }
 
     public boolean replace(int id, Item item) {
@@ -70,7 +73,7 @@ public class Tracker {
 
         if (index != -1 && item != null) {
             item.setId(id);
-            items.add(index, item);
+            items.set(index, item);
             return true;
         }
         return false;
