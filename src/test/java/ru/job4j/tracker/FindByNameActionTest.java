@@ -9,6 +9,9 @@ import ru.job4j.tracker.output.MockInput;
 import ru.job4j.tracker.output.Output;
 import ru.job4j.tracker.output.StubOutput;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FindByNameActionTest {
@@ -24,10 +27,9 @@ public class FindByNameActionTest {
         new String[]{"0", "TestName", "1"}
         );
 
-        UserAction[] actions = new UserAction[]{
-                new FindByNameAction(output),
-                new ExitAction(output)
-        };
+        List<UserAction> actions = new ArrayList<>();
+        actions.add(new FindByNameAction(output));
+        actions.add(new ExitAction(output));
 
         new StartUI(output).init(input, tracker, actions);
 

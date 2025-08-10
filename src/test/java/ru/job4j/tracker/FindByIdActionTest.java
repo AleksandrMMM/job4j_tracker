@@ -9,6 +9,9 @@ import ru.job4j.tracker.output.MockInput;
 import ru.job4j.tracker.output.Output;
 import ru.job4j.tracker.output.StubOutput;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class FindByIdActionTest {
@@ -20,10 +23,9 @@ public class FindByIdActionTest {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Test item"));
         Input input = new MockInput(new String[] {"0", String.valueOf(item.getId()), "1"});
-        UserAction[] actions = new UserAction[] {
-                new FindByIdAction(output),
-                new ExitAction(output)
-        };
+        List<UserAction> actions = new ArrayList<>();
+        actions.add(new FindByIdAction(output));
+        actions.add(new ExitAction(output));
 
         new StartUI(output).init(input, tracker, actions);
 

@@ -22,7 +22,7 @@ public class FindAllAction implements UserAction {
     public boolean execute(Input input, Tracker tracker) {
         output.println("=== Показать все заявки ===");
         var items  = tracker.findAll();
-        if (items.length > 0) {
+        if (!items.isEmpty()) {
             for (Item item : items) {
                 output.println(item);
             }
