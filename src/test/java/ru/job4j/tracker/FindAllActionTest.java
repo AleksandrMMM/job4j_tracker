@@ -31,7 +31,6 @@ public class FindAllActionTest {
         list.add(new FindAllAction(output));
         list.add(new ExitAction(output));
 
-
         new StartUI(output).init(input, tracker, list);
 
         String ln = System.lineSeparator();
