@@ -1,8 +1,6 @@
-package ru.job4j;
+package ru.job4j.collection;
 
 import org.junit.jupiter.api.Test;
-import ru.job4j.collection.FullSearch;
-import ru.job4j.collection.Task;
 
 import java.util.*;
 
@@ -13,7 +11,7 @@ public class FullSearchTest {
     @Test
     public void whenExtractNumberWithDuplicates() {
         FullSearch fullSearch = new FullSearch();
-        List tasks = Arrays.asList(
+        List<Task> tasks = Arrays.asList(
                 new Task("1", "First desc"),
                 new Task("2", "Second desc"),
                 new Task("1", "First desc")
@@ -25,7 +23,7 @@ public class FullSearchTest {
     @Test
     public void whenExtractNumberWithUniqueTasks() {
         FullSearch fullSearch = new FullSearch();
-        List tasks = Arrays.asList(
+        List<Task> tasks = Arrays.asList(
                 new Task("1", "First desc"),
                 new Task("2", "Second desc"),
                 new Task("3", "Third desc")
@@ -44,12 +42,12 @@ public class FullSearchTest {
     @Test
     public void whenExtractNumberWithAllTasksHavingSameNumber() {
         FullSearch fullSearch = new FullSearch();
-        List tasks = Arrays.asList(
+        List<Task> tasks = Arrays.asList(
                 new Task("1", "First desc"),
                 new Task("1", "Second desc"),
                 new Task("1", "Third desc")
         );
-        Set expected = Set.of("1");
+        Set<String> expected = Set.of("1");
         assertThat(fullSearch.extractNumber(tasks)).containsAll(expected);
     }
 }
